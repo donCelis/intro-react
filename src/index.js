@@ -8,9 +8,12 @@ import "./styles/main.css";
 //Components
 import App from "./app";
 
+//React por defecto solo puede renderizar un solo componente
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <>
+      <App />
+    </>
   </React.StrictMode>,
   document.getElementById("root")
 );

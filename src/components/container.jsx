@@ -1,5 +1,5 @@
-const Container = ({children}) => {
-  return <section className="container">{children}</section>;
+const Container = ({ children, classProp }) => {
+  return <section className={"container " + classProp}>{children}</section>;
 };
 
 export default Container;

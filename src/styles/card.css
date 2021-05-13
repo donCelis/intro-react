@@ -1,3 +1,6 @@
 .card .card-title{
   color: var(--color-text);
 }
+.card .card-title::first-letter{
+  text-transform: uppercase;
+}
