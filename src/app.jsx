@@ -1,25 +1,15 @@
 import { useState } from "react";
 import Container from "./components/container";
-import Card from "./components/card";
-import { data } from "./data";
+import Articles from "./components/articles";
 import LoginForm from "./components/login";
 
 const App = () => {
-  const [session, setSession] = useState(true);
+  const [session, setSession] = useState(false);
 
   return (
     <Container classProp={"py-4"}>
       {session ? (
-        //Convertir en componente
-        <div className="row py-5 gy-4">
-          {data.map((element, id) => (
-            <Card col="col-md-6 col-lg-3" key={id} {...element} />
-          ))}
-          <button onClick={() => setSession(false)} className="btn btn-success">
-            Cerrar Sesión
-          </button>
-        </div>
-        //Convertir en componente
+        <Articles setState={setSession} />
       ) : (
         <LoginForm setState={setSession} />
       )}
