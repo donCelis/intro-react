@@ -7,14 +7,12 @@ import "./styles/main.css";
 
 //Components
 import App from "./app";
-import Contador from "./components/contador";
 
 //React por defecto solo puede renderizar un solo componente
 ReactDOM.render(
   <React.StrictMode>
     <>
       <App />
-      {/* <Contador /> */}
     </>
   </React.StrictMode>,
   document.getElementById("root")
